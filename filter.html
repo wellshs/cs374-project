@@ -1,29 +1,60 @@
 <html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>   
+</head>
+    
+<body>       
+<br>
 <div class="row">
-    <div class="col-md-3">
-        Location<br>
-        <input type="text" name="location-">
+    <div class="col-md-1">
     </div>
     
-    <div class="col-md-3">
-        Type<br>
-        <select>
-            <option value="default"></option>
-            <option value="1종 대형">1종 대형</option>
-            <option value="1종 보통">1종 보통</option>
-            <option value="2종 보통">2종 보형</option>
-            <option value="2종 소형">2종 소형</option>
-            <option value="원동기">원동기</option>
+    <div class="col-md-2">
+        <font size ="5">Location</font><br>
+        <input id="location">
+        
+        <script>
+            $( "#location" ).autocomplete({
+            source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+            });
+        </script>
+        
+    </div>
+    
+    <div class="col-md-2">
+        <font size ="5">Type</font><br>
+        <select style="font-size:16pt">
+            <option disabled selected hidden></option>
+            <option value="1종 대형" style="font-size:10pt">1종 대형</option>
+            <option value="1종 보통" style="font-size:10pt">1종 보통</option>
+            <option value="2종 보통" style="font-size:10pt">2종 보통</option>
+            <option value="2종 소형" style="font-size:10pt">2종 소형</option>
+            <option value="원동기" style="font-size:10pt">원동기</option>
         </select>
     </div>
     
-    <div class="col-md-3">
-        Date<br>
+    <div class="col-md-2">
+        <font size ="5">Date</font><br>
+        <input type="date" />
     </div>
     
-    <div class="col-md-3">
-        <input type="submit" value="search">
+    <div class="col-md-2">
+        <br><br>
+        <font size ="4"><input type="submit" value="search"></font>
     </div>
+    
+    <div class="col-md-2">
+    </div>
+       
+    <div class="col-md-1">  
+    </div>
+
 </div>
+    
+
+</body>    
 </html>
