@@ -14,7 +14,7 @@
 
     <div class="col-md-2">
         <font size ="5">Location</font><br>
-        <input class="form-control input-lg" id="location">
+        <input class="form-control input-lg" id="location" name="location">
 
         <script>
             $( "#location" ).autocomplete({
@@ -26,7 +26,7 @@
 
     <div class="col-md-2">
         <font size ="5">Type</font><br>
-        <select class="form-control input-lg">
+        <select class="form-control input-lg" name="type" id="type">
             <option disabled selected hidden></option>
             <option value="1종 대형" style="font-size:10pt">1종 대형</option>
             <option value="1종 보통" style="font-size:10pt">1종 보통</option>
@@ -38,13 +38,12 @@
 
     <div class="col-md-2">
         <font size ="5">Date</font><br>
-        <input class="form-control input-lg" type="date" />
+        <input class="form-control input-lg" type="date" name="date" id="date">
     </div>
 
     <div class="col-md-2">
         <font size = "5"><br></font>
-<!--        <font size ="4"><input class="form-control input-lg" type="submit" value="search"></font>-->
-        <input class="btn btn-primary input-lg " type="submit" value="Submit" style="width: 50% !important;">
+        <input class="btn btn-primary input-lg " type="submit" value="Submit" style="width: 50% !important;" onclick="myFunction()">
     </div>
 
     <div class="col-md-2">
@@ -52,6 +51,34 @@
 
 </div>
 
+    
+<p id="l"></p>
+<p id="t"></p>
+<p id="d"></p>
 
+    
+    
+    
+<script>
+function myFunction() {
+    var location, type, date;
+
+    location = document.getElementById("location").value;
+    type = document.getElementById("type").value;
+    date = document.getElementById("date").value;
+
+    if (location=="" && type=="" && date=="") {
+        document.getElementById("l").innerHTML = "No result";
+    } else {
+        document.getElementById("l").innerHTML = location;
+        document.getElementById("t").innerHTML = type;
+        document.getElementById("d").innerHTML = date;
+    }
+}
+</script>    
+    
+    
+      
+    
 </body>
 </html>
