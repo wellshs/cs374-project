@@ -19,7 +19,7 @@
         </div>
         <div class ='col-md-2'>
           <br>
-          <button id='btn-mypage' type='button' class='btn btn-primary btn-lg' >My page</button>
+          <button id='btn-mypage' type='button' class='btn btn-primary btn-lg' onclick="goto_mypage_function()">My page</button>
           <button id='btn-logout'type='button' class='btn btn-primary btn-lg' style="width: 50% !important;" onclick="solvingfunction()">Log-out</button>
         </div>
       </div>
@@ -31,6 +31,12 @@ function solvingfunction() {
     top.location="main.html"
 }
 </script> 
+      
+<script>
+function goto_mypage_function() {
+    top.location="mypage.html"
+}
+</script>
       
       
   </body>
