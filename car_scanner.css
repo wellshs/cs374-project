@@ -6,3 +6,10 @@ iframe{
   width:100%;
   overflow-x:'hidden';
 }
+table {
+  border-collapse: collapse;
+}
+tr {
+  border: solid;
+  border-width: 1px 0;
+}
