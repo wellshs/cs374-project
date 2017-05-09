@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* listd Tab Navigation */
 .tab.list{padding:0 0 35px 0}
-.tab.list ul{position:relative;margin:0;padding:0;_padding:2px 0 0 0;list-style:none;border-bottom:2px solid #315593;font-family:Tahoma, Sans-serif;font-size:12px;*zoom:1}
+.tab.list ul{position:relative;margin:0;padding:0;_padding:2px 0 0 0;list-style:none;border-bottom:2px solid #315593;font-family:Tahoma, Sans-serif;*zoom:1}
 .tab.list ul:after{content:"";display:block;clear:both}
 .tab.list li{float:left;margin-bottom:-1px}
 .tab.list li a,
