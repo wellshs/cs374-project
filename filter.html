@@ -14,11 +14,11 @@
 
     <div class="col-md-2">
         <font size ="5">Location</font><br>
-        <input class="form-control input-lg" id="location" name="location">
+        <input type = "text" class="form-control input-lg" id="location" name="location" placeholder="서울시 노원구">
 
         <script>
             $( "#location" ).autocomplete({
-            source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ]
+            source: [ "서울시 노원구", "서울시 도봉구", "서울시 강남구", "서울시 동작구", "서울시 마포구", "대전시 유성구", "대전시 서구" ]
             });
         </script>
 
@@ -30,7 +30,7 @@
             <option disabled selected hidden></option>
             <option value="1종 대형" style="font-size:10pt">1종 대형</option>
             <option value="1종 보통" style="font-size:10pt">1종 보통</option>
-            <option value="2종 보통" style="font-size:10pt">2종 보통</option>
+            <option value="2종 보통" style="font-size:10pt" selected>2종 보통</option>
             <option value="2종 소형" style="font-size:10pt">2종 소형</option>
             <option value="원동기" style="font-size:10pt">원동기</option>
         </select>
