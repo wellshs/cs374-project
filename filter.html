@@ -43,7 +43,7 @@
 
     <div class="col-md-2">
         <font size = "5"><br></font>
-        <input id='search-btn' class="btn btn-primary input-lg " type="submit" value="Submit" style="width: 50% !important;" onclick="myFunction()">
+        <input id='search-btn' class="btn btn-primary input-lg " type="submit" value="Submit" style="width: 50% !important;" onclick="showresult()">
     </div>
 
     <div class="col-md-2">
@@ -55,6 +55,7 @@
 <p id="l"></p>
 <p id="t"></p>
 <p id="d"></p>
+<br>
 <div id='result'>
 </div>
 
@@ -78,9 +79,8 @@ function myFunction() {
 }
 function showresult(){
   for(var i=0;i<3;i++)
-    $("#result").append("<div><div><a href='./academy_result.html'>A academy</a></div><div><h6>location 동작구 tel) 02-XXXX-XXXX price : 400,000</h6></div></div>");
+    $("#result").append("<div style='margin-left:180px'><div><a href='./academy_result.html'>A academy</a></div><div><h6>location 동작구 tel) 02-XXXX-XXXX price : 400,000</h6></div></div>");
 }
-showresult();
 </script>
 
 
