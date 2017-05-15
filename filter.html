@@ -43,7 +43,7 @@
 
     <div class="col-md-2">
         <font size = "5"><br></font>
-        <input id='search-btn' class="btn btn-primary input-lg " type="submit" value="Submit" style="width: 50% !important;" onclick="showresult()">
+        <input id='search-btn' class="btn btn-primary input-lg " type="submit" value="Submit" style="width: 50% !important;" onclick="myFunction()">
     </div>
 
     <div class="col-md-2">
@@ -59,29 +59,82 @@
 <div id='result'>
 </div>
 
-
-
+    
+    
+    
+    
+<!--make database-->
 <script>
+  var db;
+  
+  db = [ {
+    "name" : "ABC academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-5번지",
+    "type" : "2종 보통",
+    "date" : "2017-05-18"
+  },
+  {
+    "name" : "ABC academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-5번지",
+    "type" : "2종 보통",
+    "date" : "2017-05-16"
+  },
+  {
+    "name" : "H academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 상계동 127-3번지",
+    "type" : "2종 보통",
+    "date" : "2017-05-16"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-8번지",
+    "type" : "2종 보통",
+    "date" : "2017-05-16"
+  }
+]
+  
+    
+    
 function myFunction() {
-    var location, type, date;
+    var location, type, date, x=0;
 
     location = document.getElementById("location").value;
     type = document.getElementById("type").value;
     date = document.getElementById("date").value;
 
-    if (location=="" && type=="" && date=="") {
+    for(var i=0; i<db.length; i++){
+            if((location == db[i].location) && (type == db[i].type) && (date == db[i].date)){
+                //$("#result").append("<p>" + db[i].name + "</p>");
+                //$("#result").append("<p>" + db[i].real_location + "</p>");
+                //$("#result").append("<p>" + db[i].type + "</p>");
+                x += 1
+                var a = document.createElement('a');
+                var linkText = document.createTextNode(db[i].name);
+                a.appendChild(linkText);
+                a.href = "file:///C:/Users/%EC%A0%95%EC%9A%B4/Desktop/cs374-project/academy_result.html";
+                
+                $("#result").append(a);
+                $("#result").append("<p>" + db[i].real_location + "</p>")
+                $("#result").append("<p>" + db[i].type + "</p>");
+            } 
+        }
+    if(x==0){ 
         document.getElementById("l").innerHTML = "No result";
-    } else {
-        document.getElementById("l").innerHTML = location;
-        document.getElementById("t").innerHTML = type;
-        document.getElementById("d").innerHTML = date;
     }
 }
-function showresult(){
-  for(var i=0;i<3;i++)
-    $("#result").append("<div style='margin-left:180px'><div><a href='./academy_result.html'>A academy</a></div><div><h6>location 동작구 tel) 02-XXXX-XXXX price : 400,000</h6></div></div>");
-}
+    
 </script>
+
+
+    
+    
+    
+
+
 
 
 
