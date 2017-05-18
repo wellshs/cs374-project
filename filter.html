@@ -59,21 +59,21 @@
 <div id='result'>
 </div>
 
-    
-    
-    
-    
+
+
+
+
 <!--make database-->
 <script>
   var db;
-  
+
   db = [ {
     "name" : "ABC academy",
     "location" : "서울시 노원구",
     "real_location" : "서울시 노원구 중계1동 243-5번지",
     "type" : "2종 보통",
     "date" : "2017-05-18",
-    "url" : "file:///C:/Users/%EC%A0%95%EC%9A%B4/Desktop/cs374-project/A_academy.html"
+    "url" : "A_academy.html"
   },
   {
     "name" : "ABC academy",
@@ -81,7 +81,7 @@
     "real_location" : "서울시 노원구 중계1동 243-5번지",
     "type" : "2종 보통",
     "date" : "2017-05-16",
-    "url" : "file:///C:/Users/%EC%A0%95%EC%9A%B4/Desktop/cs374-project/A_academy.html"
+    "url" : "A_academy.html"
   },
   {
     "name" : "H academy",
@@ -89,7 +89,7 @@
     "real_location" : "서울시 노원구 상계동 127-3번지",
     "type" : "2종 보통",
     "date" : "2017-05-16",
-    "url" : "file:///C:/Users/%EC%A0%95%EC%9A%B4/Desktop/cs374-project/A_academy.html"
+    "url" : "A_academy.html"
   },
   {
     "name" : "C academy",
@@ -97,12 +97,12 @@
     "real_location" : "서울시 노원구 하계2동 307-8번지",
     "type" : "2종 보통",
     "date" : "2017-05-16",
-    "url" : "file:///C:/Users/%EC%A0%95%EC%9A%B4/Desktop/cs374-project/A_academy.html"
+    "url" : "A_academy.html"
   }
 ]
-  
-    
-    
+
+
+
 function myFunction() {
     var location, type, date, x=0;
 
@@ -120,23 +120,23 @@ function myFunction() {
                 var linkText = document.createTextNode(db[i].name);
                 a.appendChild(linkText);
                 a.href = db[i].url;
-                
+
                 $("#result").append(a);
                 $("#result").append("<p>" + db[i].real_location + "</p>")
                 $("#result").append("<p>" + db[i].type + "</p>");
-            } 
+            }
         }
-    if(x==0){ 
+    if(x==0){
         document.getElementById("l").innerHTML = "No result";
     }
 }
-    
+
 </script>
 
 
-    
-    
-    
+
+
+
 
 
 
