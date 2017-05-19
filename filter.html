@@ -79,7 +79,7 @@
             <div class="panel panel-default" style="border-style: none; width: 260px; margin-left: 5px">
                 <ul class="list-group" >
                     <li class="list-group-item">
-                        가격 순으로 정렬
+                        <div id = "onoff">가격 정렬 OFF</div>
                         <div class="material-switch pull-right">
                             <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
                             <label for="someSwitchOptionPrimary" class="label-primary"></label>
@@ -98,6 +98,24 @@
             </div>            
     </div>
 
+<script>
+
+$("#someSwitchOptionPrimary").click(function(){
+    if ($('#onoff').text() == '가격 정렬 OFF'){
+        $('#onoff').text('가격 정렬 ON');
+    }
+    else{
+        $('#onoff').text('가격 정렬 OFF');
+    }
+        /*
+    $('#onoff').toggle(function() {
+        $(this).text('가격 정렬 OFF');
+    }, function() {
+        $(this).text('가격 정렬 ON');
+    });
+    */
+});
+</script>
     
     
 <style>
@@ -118,7 +136,7 @@
     border-radius: 8px;
     content: '';
     height: 16px;
-    margin-top: 0px;
+    margin-top: -20px;
     position:absolute;
     opacity: 0.3;
     transition: all 0.4s ease-in-out;
@@ -131,7 +149,7 @@
     content: '';
     height: 24px;
     left: -4px;
-    margin-top: 0px;
+    margin-top: -20px;
     position: absolute;
     top: -4px;
     transition: all 0.3s ease-in-out;
