@@ -3,7 +3,7 @@ $("#slider-range").slider({
     min: 0,
     max: 1440,
     step: 15,
-    values: [540, 1020],
+    values: [360, 1020],
     slide: function (e, ui) {
         var hours1 = Math.floor(ui.values[0] / 60);
         var minutes1 = ui.values[0] - (hours1 * 60);
