@@ -1,20 +1,23 @@
 <html>
 <head>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" type="text/css" href="tab.css"/>
 </head>
 
+
 <body>
 <div class='row' style="margin:10px">
-  <div class='col-md-9 col-sm-9 col-lg-9'>
-    <h2><strong> D academy </strong></h2>
+  <div class='col-md-10 col-sm-10 col-lg-10'>
+    <h2><strong> D academy      </strong> <span class="star-prototype">4.5</span> (4.5)<h2>
     <br>
     <h4>연락처 : 02-XXXX-XXXX</h4>
   </div>
-  <div class='col-md-3 col-sm-3 col-lg-3'>
+  <div class='col-md-2 col-sm-2 col-lg-2'>
     <br>
     <a href="book.html">
-      <input id='btn-login'class='btn btn-primary btn-lg' value='예약하기' style="width: 50% !important;" type='submit'>
+      <input id='btn-login'class='btn btn-primary btn-lg' value='예약하기' type='submit'>
     </a>
   </div>
 </div>
@@ -22,15 +25,25 @@
 <div class="tab list jx" style="margin-left:10px">
 	<ul>
 		<li class="active"><a href="#"><span>정보</span></a>
-			<ul>
-				<li>&rsaquo; <a href="#">학원정보가 들어갑니다.</a> </li>
+			<ul style="background-color: ivory">
+				<li><span id="academy_info">
+          <h5>이름 : A academy</h5>
+          <br/>
+          <span>전화번호 : 02-xxxx-xxxx</span>
+          <br/>
+          <span>주소 : 서울시 노원구 103-77</span>
+          <br/>
+          <span>홈페이지 : www.aacademy-nothing.co.kr</span>
+          <br/>
+          <span>자체운전면허시험 여부 : 가능</span>
+        </span></li>
 			</ul>
 		</li>
 		<li><a href="#"><span>지도</span></a>
-			<ul>
+			<ul style="background-color: ivory">
                 <iframe id="google_map"
                         width="100%"
-                        height="400"
+                        height="300"
                         frameborder="0" style="border:0"
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAq9DgCUz1ZFDTvJw4zUb7_RK0xIvIrJdU
                             &q=Fairmont+Empress,Victoria+BC
@@ -39,13 +52,52 @@
 			</ul>
 		</li>
     <li><a href="#"><span>리뷰</span></a>
-			<ul>
-				<li>&rsaquo; <a href="#">리뷰들이 들어갑니다.</a> </li>
+			<ul style="background-color: ivory">
+  				<li>
+            <div class="w3-card w3-hover-shadow" style="background-color: white">
+              <div class="w3-container">
+                <p class='card-title'>This will be title <span class="star-prototype">4.5</span> (4.5)</p>
+                <p>This is some text within a card block.</p>
+              </div>
+            </div>
+            <div class="w3-card w3-hover-shadow" style="background-color: white">
+              <div class="w3-container">
+                <p class='card-title'>This will be title <span class="star-prototype">4.5</span> (4.5)</p>
+                <p>This is some text within a card block.</p>
+              </div>
+            </div>
+            <div class="w3-card w3-hover-shadow" style="background-color: white">
+              <div class="w3-container">
+                <p class='card-title'>This will be title <span class="star-prototype">4.5</span> (4.5)</p>
+                <p>This is some text within a card block.</p>
+              </div>
+            </div>
+            <div class="w3-card w3-hover-shadow" style="background-color: white">
+              <div class="w3-container">
+                <p class='card-title'>This will be title <span class="star-prototype">4.5</span> (4.5)</p>
+                <p>This is some text within a card block.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+          </li>
 			</ul>
 		</li>
 	</ul>
 </div>
+<script>
+$.fn.generateStars = function() {
+    return this.each(function(i,e){$(e).html($('<span/>').width($(e).text()*16));});
+};
 
+// 숫자 평점을 별로 변환하도록 호출하는 함수
+$('.star-prototype').generateStars();
+</script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="tab.js"></script>
 
