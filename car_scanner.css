@@ -16,3 +16,13 @@ tr {
 .old{
   color:'0xaaaaaa'
 }
+.available{
+  text-decoration: underline;
+}
+.available:hover{
+  font-weight: bold;
+  cursor: hand;
+}
+.time-table:hover{
+  cursor: hand;
+}

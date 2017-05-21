@@ -22,12 +22,16 @@ curRef.once('value').then(function(snapshot)
 })
 $("#time-table-div").hide();
 
-$(".next").click(function()
+$(".available").click(function()
 {
   var text = this.innerHTML;
   $("#time-table-div").show();
   $("#time-table-title").html("2017-05-"+text);
 });
+$(".time-table").click(function(){
+  $(this).find("input").attr("checked", true);
+})
+
 
 
 $("#btn-book").click(function()
@@ -36,6 +40,10 @@ $("#btn-book").click(function()
   if(r==true)
   {
     var selected_tr = $(':radio[name="group1"]:checked').parent().parent();
+    if(selected_tr.length==0){
+      alert("선택하지 않으셨습니다.");
+      return
+    }
     var tds = selected_tr.find("td");
     var date = $("#time-table-title").text();
     bookRef.push({
