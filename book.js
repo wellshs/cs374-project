@@ -12,9 +12,13 @@ var database = firebase.database()
 var curRef = database.ref("cur/-Kkc7XDV06v9PcOdv5K-")
 var bookRef = database.ref("book")
 var curname = ''
+var curprice = ''
+var curtype = ''
 curRef.once('value').then(function(snapshot)
 {
   curname =  snapshot.val().name
+  curprice = snapshot.val().price
+  curtype = snapshot.val().type
 })
 $("#time-table-div").hide();
 
@@ -37,7 +41,9 @@ $("#btn-book").click(function()
     bookRef.push({
       name : curname,
       date : date,
-      time : tds[1].innerText
+      time : tds[1].innerText,
+      price : curprice,
+      type : curtype
     })
     window.location.href = "filter.html";
   }

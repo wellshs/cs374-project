@@ -24,7 +24,7 @@ function bindcancel(){
   });
 }
 
-bookRef.once('value', function(snapshot){
+bookRef.on('value', function(snapshot){
   var books = snapshot.val()
   var childHTMLs = Object.keys(books).map(function(key){
     var data = books[key]
@@ -41,11 +41,11 @@ bookRef.once('value', function(snapshot){
           </tr>
           <tr>
               <td style="text-indent : 20px">면허 종류 :</td>
-              <td style="text-indent : 10px">1종 보통</td>
+              <td style="text-indent : 10px">${data.type}</td>
           </tr>
           <tr>
               <td style="text-indent : 20px">결제 금액 :</td>
-              <td style="text-indent : 10px">450,000원</td>
+              <td style="text-indent : 10px">${data.price}원</td>
           </tr>
           <tr>
               <td style="text-indent : 20px">학원 위치 :</td>
