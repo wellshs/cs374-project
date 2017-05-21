@@ -36,6 +36,11 @@ function myFunction() {
     date = document.getElementById("date").value;
     $("#result").empty();
     searchlist = [];
+    z = [];
+    
+    $("#additional_filter").show();
+    $("#someSwitchOptionPrimary").prop('checked', false);
+    $('#onoff').text('가격 정렬 OFF');
 
     for(var i=0; i<db.length; i++){
             if((location == db[i].location) && (type == db[i].type) && (date == db[i].date)){
