@@ -14,6 +14,7 @@ var postsRef = database.ref("posts")
 var academyRef = database.ref("academy")
 var curRef = database.ref("cur")
 var bookRef = database.ref("book")
+var likeRef = database.ref("like")
 
 //
 // bookRef.push({

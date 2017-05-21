@@ -1,17 +1,39 @@
 var reservation_info = document.getElementById("reservation_info");
 
-var config = {
-  apiKey: "AIzaSyApEs803NuXtJukZzsjBL7SKFqrMHjGjnI",
-  authDomain: "cs492-test.firebaseapp.com",
-  databaseURL: "https://cs492-test.firebaseio.com",
-  projectId: "cs492-test",
-  storageBucket: "cs492-test.appspot.com",
-  messagingSenderId: "233920767382"
-};
-
-firebase.initializeApp(config);
-var database = firebase.database()
 var bookRef = database.ref("book")
+var likeRef = database.ref("like")
+
+
+function binddelete(){
+  $('.delete-like').click(function() {
+      var result = confirm('정말 삭제하시겠습니까?');
+      if(result){
+          var key = $(this).data('key');
+          var newbookRef = database.ref("like/" + key);
+          newbookRef.remove();
+          $(this).parent().empty();
+      }
+  });
+}
+
+likeRef.once('value').then(function(snapshot){
+  var likes = snapshot.val()
+  var childHTMLs = Object.keys(likes).map(function(key){
+    var data = likes[key]
+    return `
+    <li>&rsaquo;
+      <a href="${data.url}"><b>${data.name}</b></a>
+      <span style="line-height:2%"><br></span>
+      <input type="button" class="delete-like" data-key="${key}" value = "삭제하기" style="margin-left : 20px"></input>
+    </li>`
+  })
+  var childHTML = childHTMLs.join("")
+  $("#like_info").empty()
+  $("#like_info").append(childHTML)
+  binddelete()
+})
+
+
 
 function bindcancel(){
   $('.cancel_reservation').click(function() {
@@ -20,6 +42,7 @@ function bindcancel(){
           var key = $(this).data('key');
           var newbookRef = database.ref("book/" + key);
           newbookRef.remove();
+          $(this).parent().empty();
       }
   });
 }
@@ -28,7 +51,8 @@ bookRef.on('value', function(snapshot){
   var books = snapshot.val()
   var childHTMLs = Object.keys(books).map(function(key){
     var data = books[key]
-    return `<li>&rsaquo; <a href="#"><b>${data.name}</b></a> </li>
+    return `<div>
+    <li>&rsaquo; <a href="#"><b>${data.name}</b></a> </li>
     <span style="line-height:1%"><br></span>
       <table>
           <tr>
@@ -53,7 +77,7 @@ bookRef.on('value', function(snapshot){
           </tr>
       </table>
     <span style="line-height:1%"><br></span>
-    <input type="button" class="cancel_reservation" data-key="${key}" value = "예약 취소" style="margin-left : 20px">`
+    <input type="button" class="cancel_reservation" data-key="${key}" value = "예약 취소" style="margin-left : 20px"></input></div>`
   })
   var childHTML = childHTMLs.join("")
   $("#reservation_info").empty()

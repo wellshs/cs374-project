@@ -1,3 +1,15 @@
+var config = {
+  apiKey: "AIzaSyApEs803NuXtJukZzsjBL7SKFqrMHjGjnI",
+  authDomain: "cs492-test.firebaseapp.com",
+  databaseURL: "https://cs492-test.firebaseio.com",
+  projectId: "cs492-test",
+  storageBucket: "cs492-test.appspot.com",
+  messagingSenderId: "233920767382"
+};
+
+firebase.initializeApp(config);
+var database = firebase.database()
+var likeRef = database.ref("like")
 jQuery(function($){
 	// List Tab Navigation
 	var $tab_list = $('.tab.list');
@@ -17,4 +29,15 @@ jQuery(function($){
 		}
 	}
 	$tab_list.find('>ul>li>a').click(listTabMenuToggle).focus(listTabMenuToggle);
+});
+
+$(".btn-like").click(function(){
+  var r = confirm("확인을 누르시면 관심학원에 등록됩니다.")
+	if(r)
+	{
+		likeRef.push({
+			name : "A academy",
+			url : "A_academy.html"
+		})
+	}
 });
