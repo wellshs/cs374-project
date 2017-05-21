@@ -1,15 +1,13 @@
 <html>
 
 <head>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" href="time-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
-    
-    
-    
 </head>
 
 <body>
@@ -64,13 +62,13 @@
 
 
 
-    
+
 <div style="margin-left : 15px; float : left">
 <div style="border-bottom-style : solid; max-width : 208px; border-color: #1976d2;"> <font size ="4">가격 정렬 </font> <i id="price" class="fa fa-angle-down" style="font-size:25px; margin-left:107px; margin-top:10px; color: #1976d2"></i></div>
 
 
-    
-    
+
+
 
 
     <div class="row" id = "price-sort">
@@ -84,7 +82,7 @@
                             <label for="someSwitchOptionPrimary" class="label-primary"></label>
                         </div>
                     </li>
-<!--                    
+<!--
                     <li class="list-group-item">
                         가격 순으로 정렬
                         <div class="material-switch pull-right">
@@ -94,7 +92,7 @@
                     </li>
 -->
                 </ul>
-            </div>            
+            </div>
     </div>
 
 <script>
@@ -115,18 +113,18 @@ $("#someSwitchOptionPrimary").click(function(){
     */
 });
 </script>
-    
-    
+
+
 <style>
 .material-switch > input[type="checkbox"] {
-    display: none;   
+    display: none;
 }
 
 .material-switch > label {
     cursor: pointer;
     height: 0px;
-    position: relative; 
-    width: 40px;  
+    position: relative;
+    width: 40px;
 }
 
 .material-switch > label::before {
@@ -162,42 +160,42 @@ $("#someSwitchOptionPrimary").click(function(){
     background: inherit;
     left: 20px;
 }
-    
-    
-</style>    
 
-    
-    
-    
-    
+
+</style>
+
+
+
+
+
 <p style="border-bottom-style : solid; max-width : 208px; border-color: #1976d2;"> <font size ="4">시간대 설정 </font> <i id="time" class="fa fa-angle-down" style="font-size:25px; margin-left:90px; margin-top:30px; color: #1976d2"></i></p>
-    
+
 <style>
 #price:hover{
  cursor: hand;
-}     
+}
 #time:hover{
  cursor: hand;
-}    
+}
 </style>
-    
+
 <script>
 $("#price").click(function(){
     $("#price-sort").toggle();
     $('#price').toggleClass("fa-angle-down fa-angle-up");
 })
-    
+
 $("#time").click(function(){
     $("#time-range").toggle();
     $('#time').toggleClass("fa-angle-down fa-angle-up");
-})    
-    
+})
+
 </script>
-    
-    
-       
-    
-    
+
+
+
+
+
 <div id="time-range">
     <p>시작 시간 - 끝나는 시간 <br><span class="slider-time">6:00 AM</span> - <span class="slider-time2">5:00 PM</span>
 
@@ -207,87 +205,18 @@ $("#time").click(function(){
     </div>
 </div>
 
-</div>    
+</div>
 
-    
+
 <div id='result' style="float : left; margin-left : 40px; margin-top : 15px">
 </div>
-    
 
-    
+
+
 <!--make database-->
-<script>
-
-  var db;
-
-
-  db = [ {
-    "name" : "ABC academy",
-    "location" : "서울시 노원구",
-    "real_location" : "서울시 노원구 중계1동 243-5번지",
-    "type" : "2종 보통",
-    "date" : "2017-05-18",
-    "url" : "A_academy.html"
-  },
-  {
-    "name" : "ABC academy",
-    "location" : "서울시 노원구",
-    "real_location" : "서울시 노원구 중계1동 243-5번지",
-    "type" : "2종 보통",
-    "date" : "2017-05-16",
-    "url" : "A_academy.html"
-  },
-  {
-    "name" : "H academy",
-    "location" : "서울시 노원구",
-    "real_location" : "서울시 노원구 상계동 127-3번지",
-    "type" : "2종 보통",
-    "date" : "2017-05-16",
-    "url" : "A_academy.html"
-  },
-  {
-    "name" : "C academy",
-    "location" : "서울시 노원구",
-    "real_location" : "서울시 노원구 하계2동 307-8번지",
-    "type" : "2종 보통",
-    "date" : "2017-05-16",
-    "url" : "A_academy.html"
-  }
-]
-
-  
-function myFunction() {
-    var location, type, date, x=0;
-
-    location = document.getElementById("location").value;
-    type = document.getElementById("type").value;
-    date = document.getElementById("date").value;
-
-    for(var i=0; i<db.length; i++){
-            if((location == db[i].location) && (type == db[i].type) && (date == db[i].date)){
-                //$("#result").append("<p>" + db[i].name + "</p>");
-                //$("#result").append("<p>" + db[i].real_location + "</p>");
-                //$("#result").append("<p>" + db[i].type + "</p>");
-                x += 1
-                var a = document.createElement('a');
-                var linkText = document.createTextNode(db[i].name);
-                a.appendChild(linkText);
-                a.href = db[i].url;
-
-                $("#result").append(a);
-                $("#result").append("<p>" + db[i].real_location + "</p>")
-                $("#result").append("<p>" + db[i].type + "</p>");
-            }
-        }
-    if(x==0){
-        document.getElementById("l").innerHTML = "No result";
-    }
-}
-
-</script>
 
 <script src="time-slider.js"></script>
-
+<script type="text/javascript" src="filter.js"></script>
 
 
 

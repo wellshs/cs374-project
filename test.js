@@ -12,15 +12,24 @@ firebase.initializeApp(config);
 var database = firebase.database()
 var postsRef = database.ref("posts")
 var academyRef = database.ref("academy")
+var curRef = database.ref("cur")
+var bookRef = database.ref("book")
 
-academyRef.push({
-  "name" : "ABC academy",
-  "location" : "Nowon-gu, Seoul",
-  "real_location" : "102-71, Nowon-gu, Seoul",
-  "type" : "2종 보통",
-  "date" : "2017-05-18",
-  "url" : "A_academy.html"
-})
+//
+// bookRef.push({
+//   name : "H academy",
+//   date : "2017-05-18",
+//   time : "9:00-10:30"
+// })
+//
+// academyRef.push({
+//   "name" : "ABC academy",
+//   "location" : "Nowon-gu, Seoul",
+//   "real_location" : "102-71, Nowon-gu, Seoul",
+//   "type" : "2종 보통",
+//   "date" : "2017-05-18",
+//   "url" : "A_academy.html"
+// })
 
 //클릭시 database에 값 넣기
 $("#submit").click(function(e) {
@@ -40,7 +49,8 @@ postsRef.once('value').then(function(snapshot)
   var comments = snapshot.val()
   Object.keys(comments).map(function(key)
   {
-    alert(comments[key].username+"  "+comments[key].comment+"  "+comments[key].like)
+    alert(key)
+    // alert(comments[key].username+"  "+comments[key].comment+"  "+comments[key].like)
   })
 })
 
