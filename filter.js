@@ -14,8 +14,11 @@ var curRef = database.ref("cur/-Kkc7XDV06v9PcOdv5K-")
 function bindacademyname(){
   $(".academyname").click(function() {
     console.log($(this).text());
+    var spl = $(this).next().next().text().split(" : ");
     curRef.update({
-      name : $(this).text()
+      name : $(this).text(),
+      type : spl[0],
+      price : spl[1]
     })
   })
 };
