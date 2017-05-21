@@ -30,15 +30,37 @@ jQuery(function($){
 	}
 	$tab_list.find('>ul>li>a').click(listTabMenuToggle).focus(listTabMenuToggle);
 });
-    
+
+
+
+var list = [];
+likeRef.once("value").then(function(snapshot){
+	var likes = snapshot.val()
+	list = Object.keys(likes).map(function(key){
+		var data = likes[key].name.trim()
+		return data
+	})
+});
+
+
 $(".btn-like").click(function(){
+	for(var i=0;i<list.length;i++)
+	{
+		if(list[i]==$("#academy-name").text().trim())
+		{
+			alert("이미 관심학원에 등록된 학원입니다.");
+			return;
+		}
+	}
   var r = confirm("확인을 누르시면 관심학원에 등록됩니다.")
 	if(r)
 	{
+		console.log($("#academy-name").text())
 		likeRef.push({
-			name : $("#academy-name").text(),
+			name : $("#academy-name").text().trim(),
 			url : window.location.href
 		})
+		$(".btn-like").attr('disabled',true)
 	}
 });
 
