@@ -17,7 +17,7 @@
 
     <div class="col-md-2">
         <font size ="5">Location</font><br>
-        <input type = "text" class="form-control input-lg" id="location" name="location" placeholder="서울시 노원구">
+        <input type = "text" class="form-control input-lg" id="location" name="location" placeholder="서울시 노원구" autofocus>
 
         <script>
             $( "#location" ).autocomplete({
@@ -29,7 +29,7 @@
 
     <div class="col-md-2">
         <font size ="5">Type</font><br>
-        <select class="form-control input-lg" name="type" id="type">
+        <select class="form-control input-lg" name="type" id="type" style="cursor : pointer;">
             <option disabled selected hidden></option>
             <option value="1종 대형" style="font-size:10pt">1종 대형</option>
             <option value="1종 보통" style="font-size:10pt">1종 보통</option>
@@ -41,7 +41,7 @@
 
     <div class="col-md-2">
         <font size ="5">Date</font><br>
-        <input class="form-control input-lg" type="date" name="date" id="date">
+        <input class="form-control input-lg" type="date" name="date" id="date" min="2017-05-22" style="cursor : pointer;">
     </div>
 
     <div class="col-md-2">

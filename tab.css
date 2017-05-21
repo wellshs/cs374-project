@@ -26,7 +26,7 @@
 .tab.list li li a:focus{color:#000 !important;text-decoration:underline}
 .tab.list li.active a{border:1px solid #ccc;border-bottom:1px solid #fff;margin-top:-1px;background:transparent;color:#333}
 .card-title { border-bottom: 3px solid #a0a0a0;}
-.w3-card {margin:10px}
+.w3-card {margin:10px; color:#616161}
 span.star-prototype, span.star-prototype > * {
     height: 16px;
     background: url(http://i.imgur.com/YsyS5y8.png) 0 -16px repeat-x;

@@ -24,9 +24,9 @@ $("#time-table-div").hide();
 
 $(".available").click(function()
 {
-  var text = this.innerHTML;
+  var d = $(this).text();
   $("#time-table-div").show();
-  $("#time-table-title").html("2017-05-"+text);
+  $("#time-table-title").html("2017-05-"+d);
 });
 $(".time-table").click(function(){
   $(this).find("input").attr("checked", true);
