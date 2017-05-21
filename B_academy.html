@@ -1,5 +1,6 @@
 <html>
 <head>
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -9,15 +10,16 @@
 
 <body>
 <div class='row' style="margin:10px">
-  <div class='col-md-10 col-sm-10 col-lg-10'>
-    <h2><strong> B academy      </strong> <span class="star-prototype">4.0</span> (4.0)<h2>
+  <div class='col-md-9 col-sm-9 col-lg-9'>
+    <h2><strong id="academy-name"> B academy      </strong> <span class="star-prototype">4.0</span> (4.0)<h2>
     <br>
     <h4>연락처 : 02-1517-4400</h4>
   </div>
-  <div class='col-md-2 col-sm-2 col-lg-2'>
+  <div class='col-md-3 col-sm-3 col-lg-3'>
     <br>
+    <input style="float:left;width:45%;margin-right:5px" class='btn btn-info btn-lg btn-like' value='관심학원에 등록'>
     <a href="book.html">
-      <input id='btn-login'class='btn btn-primary btn-lg' value='예약하기' type='submit'>
+      <input style="width:45%;" class='btn btn-primary btn-lg' value='예약하기'>
     </a>
   </div>
 </div>
@@ -27,7 +29,7 @@
 		<li class="active"><a href="#"><span>정보</span></a>
 			<ul style="background-color: ivory">
 				<li><span id="academy_info">
-          <h5>이름 : A academy</h5>
+          <h5>이름 : B academy</h5>
           <br/>
           <span>전화번호 : 02-1517-4400</span>
           <br/>
@@ -102,4 +104,3 @@ $('.star-prototype').generateStars();
 
 </body>
 </html>
-

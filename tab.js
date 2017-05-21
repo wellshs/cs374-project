@@ -36,8 +36,8 @@ $(".btn-like").click(function(){
 	if(r)
 	{
 		likeRef.push({
-			name : "A academy",
-			url : "A_academy.html"
+			name : $("#academy-name").text(),
+			url : window.location.href
 		})
 	}
 });
