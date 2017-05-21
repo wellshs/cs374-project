@@ -30,7 +30,7 @@ jQuery(function($){
 	}
 	$tab_list.find('>ul>li>a').click(listTabMenuToggle).focus(listTabMenuToggle);
 });
-
+    
 $(".btn-like").click(function(){
   var r = confirm("확인을 누르시면 관심학원에 등록됩니다.")
 	if(r)
@@ -41,3 +41,4 @@ $(".btn-like").click(function(){
 		})
 	}
 });
+
