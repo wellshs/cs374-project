@@ -50,6 +50,7 @@ $("#btn-book").click(function()
 결제 금액 : ${curprice}\n
 확인을 누르시면 예약이 완료됩니다.
 `
+  var text2 = '예약이 완료되었습니다!\n\n예약하신 내용은 Mypage -> 예약목록 에서 확인할 수 있습니다.\n\n지금 바로 확인하시겠습니까?\n\n(취소 버튼 클릭시 메인 페이지로 돌아갑니다.)'
 
   var r = confirm(text)
   if(r==true)
@@ -61,7 +62,13 @@ $("#btn-book").click(function()
       price : curprice,
       type : curtype
     })
-    window.location.href = "filter.html";
+    var r2 = confirm(text2)
+    if (r2==true){
+        window.location.href = "mypage.html";
+    }
+    else {
+      window.location.href = "filter.html";
+    }
   }
 
 });
