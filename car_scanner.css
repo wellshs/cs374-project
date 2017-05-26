@@ -13,16 +13,21 @@ tr {
   border: solid;
   border-width: 1px 0;
 }
+
+td {
+  text-align: center;
+}
+
 .old{
   color:'0xaaaaaa'
 }
-.available{
-  text-decoration: underline;
-}
+
+
 .available:hover{
   font-weight: bold;
   cursor: hand;
 }
+
 .time-table:hover{
   cursor: hand;
 }
