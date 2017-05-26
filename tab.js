@@ -10,6 +10,27 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database()
 var likeRef = database.ref("like")
+var curRef = database.ref("cur")
+
+var status;
+
+curRef.once("value").then(function(snapshot){
+	var likes = snapshot.val()
+	list = Object.keys(likes).map(function(key){
+		status = likes[key].status
+	})
+});
+
+$("#book-btn").click(function(){
+  if(status==0)
+  {
+    alert("예약하려면 로그인을 하셔야 합니다.")
+  }
+  else {
+    window.location.href = "book.html"
+  }
+})
+
 jQuery(function($){
 	// List Tab Navigation
 	var $tab_list = $('.tab.list');
@@ -63,4 +84,3 @@ $(".btn-like").click(function(){
 		$(".btn-like").attr('disabled',true)
 	}
 });
-

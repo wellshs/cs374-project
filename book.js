@@ -9,7 +9,7 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database()
-var curRef = database.ref("cur/-Kkc7XDV06v9PcOdv5K-")
+var curRef = database.ref("cur/-Kl40P02UGAr7kMtn9bE")
 var bookRef = database.ref("book")
 var curname = ''
 var curprice = ''

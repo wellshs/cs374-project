@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <link rel="stylesheet" href="./car_scanner.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -31,8 +32,24 @@
 
 
 <script>
+var config = {
+  apiKey: "AIzaSyApEs803NuXtJukZzsjBL7SKFqrMHjGjnI",
+  authDomain: "cs492-test.firebaseapp.com",
+  databaseURL: "https://cs492-test.firebaseio.com",
+  projectId: "cs492-test",
+  storageBucket: "cs492-test.appspot.com",
+  messagingSenderId: "233920767382"
+};
+
+firebase.initializeApp(config);
+var database = firebase.database()
+var curRef = database.ref("cur/-Kl40P02UGAr7kMtn9bE")
+
 function solvingfunction() {
     top.location="main.html"
+    curRef.update({
+      status:0
+    })
 }
 </script>
 
