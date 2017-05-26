@@ -84,3 +84,47 @@ bookRef.on('value', function(snapshot){
   $("#reservation_info").append(childHTML)
   bindcancel();
 })
+
+$("#question-div").hover(function(){
+  $("#question-info").html(`관심학원에 있는 두 학원을 비교해주는 기능입니다.<br/>
+  오른쪽의 선택창에서 학원을 고르고, 면허를 고르면 비교할 수 있습니다.`)
+  $("#question-info").show()
+})
+$("#question-div").mouseout(function(){
+  $("#question-info").hide()
+})
+$("#question-type").hover(function(){
+  $("#question-info").html(`면허 종류는 1종 대형, 1종 보통, 2종 보통, 2종 소형, 원동기가 있습니다.<br/>
+  오늘쪽의 선택창에서 면허를 고르면, 학원의 정보를 볼 수 있습니다.`)
+  $("#question-info").show()
+})
+$("#question-type").mouseout(function(){
+  $("#question-info").hide()
+})
+$("#question-price").hover(function(){
+  $("#question-info").html(`각 학원 면허를 따기위해서 드는 비용을 알려줍니다.<br/>
+  1종 대형의 평균 가격 : 525,200원<br/>
+  1종 보통의 평균 가격 : 475,200원<br/>
+  2종 보통의 평균 가격 : 375,200원<br/>
+  2종 소형의 평균 가격 : 329,200원<br/>
+  원동기의 평균 가격 : 275,200원`)
+  $("#question-info").show()
+})
+$("#question-price").mouseout(function(){
+  $("#question-info").hide()
+})
+$("#question-star").hover(function(){
+  $("#question-info").html(`해당 학원에서 수업을 들은 평균 평점입니다.`)
+  $("#question-info").show()
+})
+$("#question-star").mouseout(function(){
+  $("#question-info").hide()
+})
+$("#question-self").hover(function(){
+  $("#question-info").html(`해당 학원에서 자체적으로 운전면허시험을 볼 수 있는지 확인할 수 있습니다.<br/>
+    만약 자체적으로 볼 수 없는 경우 국가공인시험장에서 시험을 봐야합니다.`)
+  $("#question-info").show()
+})
+$("#question-self").mouseout(function(){
+  $("#question-info").hide()
+})
