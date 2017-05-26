@@ -27,20 +27,10 @@ $(".available").click(function()
   var d = $(this).text();
   $("#time-table-div").show();
   $("#time-table-title").html("2017-05-"+d);
-  
+
   $(".available").css("background-color", "white");
   $(this).css("background-color","yellow");
 });
-
-/*
-$(".available").hover(function()
-{
-  $(".available").css("cursor", "hand");
-  $(".available").css("font-weight", "normal")
-  $(this).css("font-weight", "bold");
-});
-*/
-
 
 $(".time-table").click(function(){
   $(this).find("input").attr("checked", true);
@@ -78,7 +68,7 @@ $("#btn-book").click(function()
     })
     var r2 = confirm(text2)
     if (r2==true){
-        window.location.href = "mypage.html";
+        window.location.href = "mypage_list.html";
     }
     else {
       window.location.href = "filter.html";
