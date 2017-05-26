@@ -16,6 +16,13 @@ var curRef = database.ref("cur")
 var bookRef = database.ref("book")
 var likeRef = database.ref("like")
 
+curRef.push({
+  name : "A academy",
+  price : "420000",
+  type : "2종 보통",
+  status : 0
+})
+
 //
 // bookRef.push({
 //   name : "H academy",

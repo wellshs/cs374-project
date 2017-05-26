@@ -12,7 +12,7 @@ var config = {
 
 firebase.initializeApp(config);
 var database = firebase.database()
-var curRef = database.ref("cur/-Kkc7XDV06v9PcOdv5K-")
+var curRef = database.ref("cur/-Kl40P02UGAr7kMtn9bE")
 
 function bindacademyname(){
   $(".academyname").click(function() {
@@ -37,7 +37,7 @@ function myFunction() {
     $("#result").empty();
     searchlist = [];
     z = [];
-    
+
     $("#additional_filter").show();
     $("#someSwitchOptionPrimary").prop('checked', false);
     $('#onoff').text('가격 정렬 OFF');
@@ -50,12 +50,12 @@ function myFunction() {
                 a.appendChild(linkText);
                 a.className += "academyname";
                 a.href = db[i].url;
-                
-                
+
+
                 $("#result").append(a);
                 $("#result").append("<p>" + db[i].real_location + "</p>")
                 $("#result").append("<p>" + db[i].type + " : " + db[i].price + "</p>");
-                
+
                 searchlist.push([a, db[i].real_location, db[i].type, db[i].price]);
                 z.push([a, db[i].real_location, db[i].type, db[i].price]);
             }
@@ -63,7 +63,7 @@ function myFunction() {
     if(x==0){
         document.getElementById("result").innerHTML = "No result";
     }
-    
+
     bindacademyname();
 }
 
@@ -74,13 +74,13 @@ function myFunction() {
 $("#someSwitchOptionPrimary").click(function(){
     if ($('#onoff').text() == '가격 정렬 OFF'){
         $('#onoff').text('가격 정렬 ON');
-        
+
         $("#result").empty();
-        
+
         searchlist.sort(function(a,b) {
             return a[3] - b[3];
         });
-        
+
         for(var j=0; j<searchlist.length; j++){
             $("#result").append(searchlist[j][0]);
             $("#result").append("<p>" + searchlist[j][1] + "</p>");
@@ -89,9 +89,9 @@ $("#someSwitchOptionPrimary").click(function(){
     }
     else{
         $('#onoff').text('가격 정렬 OFF');
-        
+
         $("#result").empty();
-        
+
         for(var k=0; k<z.length; k++){
             $("#result").append(z[k][0]);
             $("#result").append("<p>" + z[k][1] + "</p>");
@@ -99,13 +99,3 @@ $("#someSwitchOptionPrimary").click(function(){
         }
     }
 });
-
-
-
-
-
-
-
-
-
-
