@@ -50,11 +50,20 @@ function myFunction() {
                 a.appendChild(linkText);
                 a.className += "academyname";
                 a.href = db[i].url;
-
-
-                $("#result").append(a);
-                $("#result").append("<p>" + db[i].real_location + "</p>")
-                $("#result").append("<p>" + db[i].type + " : " + db[i].price + "</p>");
+                
+                
+                $("#result").append("<div id='initial' class='card' style='width : 743px; text-indent: 15px; '>"+"</div>")
+                $('#initial').attr('id',i);
+                
+                
+                $("#" + i).append("<div id='twice' class='card-header' style='text-indent: 5px;'>" + "</div>")
+                $('#twice').attr('id',i*2);
+                
+                $("#" + (i*2)).append(a);
+                $("#" + i).append("<p style='padding-top:10px'>" + db[i].real_location + "</p>")
+                $("#" + i).append("<p>" + db[i].type + " : " + db[i].price + "</p>");
+                
+                
 
                 searchlist.push([a, db[i].real_location, db[i].type, db[i].price]);
                 z.push([a, db[i].real_location, db[i].type, db[i].price]);
@@ -82,9 +91,17 @@ $("#someSwitchOptionPrimary").click(function(){
         });
 
         for(var j=0; j<searchlist.length; j++){
-            $("#result").append(searchlist[j][0]);
-            $("#result").append("<p>" + searchlist[j][1] + "</p>");
-            $("#result").append("<p>" + searchlist[j][2] + " : " + searchlist[j][3] + "</p>");
+            
+            $("#result").append("<div id='initial' class='card' style='width : 743px; text-indent: 15px; '>"+"</div>")
+            $('#initial').attr('id',j);
+                
+                
+            $("#" + j).append("<div id='twice' class='card-header' style='text-indent: 5px;'>" + "</div>")
+            $('#twice').attr('id',j+100);
+                
+            $("#" + (j+100)).append(searchlist[j][0]);
+            $("#" + j).append("<p style='padding-top:10px'>" + searchlist[j][1] + "</p>");
+            $("#" + j).append("<p>" + searchlist[j][2] + " : " + searchlist[j][3] + "</p>");
         }
     }
     else{
@@ -93,9 +110,17 @@ $("#someSwitchOptionPrimary").click(function(){
         $("#result").empty();
 
         for(var k=0; k<z.length; k++){
-            $("#result").append(z[k][0]);
-            $("#result").append("<p>" + z[k][1] + "</p>");
-            $("#result").append("<p>" + z[k][2] + " : " + z[k][3] + "</p>");
+            
+            $("#result").append("<div id='initial' class='card' style='width : 743px; text-indent: 15px; '>"+"</div>")
+            $('#initial').attr('id',k);
+                
+                
+            $("#" + k).append("<div id='twice' class='card-header' style='text-indent: 5px;'>" + "</div>")
+            $('#twice').attr('id',k+100);
+            
+            $("#" + (k+100)).append(z[k][0]);
+            $("#" + k).append("<p style='padding-top:10px'>" + z[k][1] + "</p>");
+            $("#" + k).append("<p>" + z[k][2] + " : " + z[k][3] + "</p>");
         }
     }
 });

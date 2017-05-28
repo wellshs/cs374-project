@@ -9,6 +9,17 @@
   </script>
   <iframe frameborder=0 scrolling = 'no' height=120px src='head.html'></iframe>
   <iframe frameborder=0 scrolling = 'no' height=1000px src='filter.html'></iframe>
+    
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function(){ 
+    $('selector').css('width', $(window).width()); 
+    $('selector').css('height', $(window).height()); 
+    $(window).resize(function() { 
+        $('selector').css('width', $(window).width()); 
+        $('selector').css('height', $(window).height()); 
+    }); 
+});
+</script>
 </html>
 
 
