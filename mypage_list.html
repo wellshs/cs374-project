@@ -11,13 +11,27 @@
 
 <div class="tab list jx">
 	<ul>
-		<li class="active"><a href="#"><span><font size="5">관심 학원 목록</font></span></a>
+        <li class="active"><a href="#"><span><font size="5">예약 학원 목록</font></span></a>
 			<ul style="font-size:150%;">
         <br>
+          <div id = "reservation_info">
+          </div>
+        </ul>
+		</li>
+        
+        
+        
+        
+		<li><a href="#"><span><font size="5">관심 학원 목록</font></span></a>
+			<ul style="font-size:150%;">
+        <br>
+<!--                
         <div class="loader-container">
           <div class="loader"></div>
           Loading
         </div>
+
+-->
         <div id="like_info">
         </div>
         <div>
@@ -136,14 +150,14 @@
         </div>
 			</ul>
 		</li>
-      <li><a href="#"><span><font size="5">예약 학원 목록</font></span></a>
-			<ul style="font-size:150%;">
-        <br>
-          <div id = "reservation_info">
-          </div>
-        </ul>
-		</li>
+      
 	</ul>
+    
+    <div class="loader-container" style="padding-top:100px">
+          <div class="loader"></div>
+          Loading
+        </div>
+    
 </div>
 <style>
   .loader-container{
