@@ -4,6 +4,261 @@ var bookRef = database.ref("book")
 var likeRef = database.ref("like")
 
 
+var dbmypage = [
+  {
+    "name" : "A academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-503",
+    "type" : "1종 대형",
+    "price" : 536000,
+    "star" : 4.5,
+    "url" : "A_academy.html"
+  },
+  {
+    "name" : "B academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 상계동 127-311",
+    "type" : "1종 대형",
+    "price" : 570000,
+    "star" : 4.0,
+    "url" : "B_academy.html"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-256",
+    "type" : "1종 대형",
+    "price" : 470000,
+    "star" : 3.0,
+    "url" : "C_academy.html"
+  },
+  {
+    "name" : "D academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 공릉동 139-804",
+    "type" : "1종 대형",
+    "price" : 500000,
+    "star" : 2.0,
+    "url" : "D_academy.html"
+  },
+  {
+    "name" : "E academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 월계동 272-781",
+    "type" : "1종 대형",
+    "price" : 550000,
+    "star" : 1.0,
+    "url" : "E_academy.html"
+  },
+  {
+    "name" : "A academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-503",
+    "type" : "1종 보통",
+    "price" : 486000,
+    "star" : 4.5,
+    "url" : "A_academy.html"
+  },
+  {
+    "name" : "B academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 상계동 127-311",
+    "type" : "1종 보통",
+    "price" : 520000,
+    "star" : 4.0,
+    "url" : "B_academy.html"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-256",
+    "type" : "1종 보통",
+    "price" : 420000,
+    "star" : 3.0,
+    "url" : "C_academy.html"
+  },
+  {
+    "name" : "D academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 공릉동 139-804",
+    "type" : "1종 보통",
+    "price" : 450000,
+    "star" : 2.0,
+    "url" : "D_academy.html"
+  },
+  {
+    "name" : "E academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 월계동 272-781",
+    "type" : "1종 보통",
+    "price" : 500000,
+    "star" : 1.0,
+    "url" : "E_academy.html"
+  },
+  {
+    "name" : "A academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-503",
+    "type" : "2종 보통",
+    "price" : 386000,
+    "star" : 4.5,
+    "url" : "A_academy.html"
+  },
+  {
+    "name" : "B academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 상계동 127-311",
+    "type" : "2종 보통",
+    "price" : 420000,
+    "star" : 4.0,
+    "url" : "B_academy.html"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-256",
+    "type" : "2종 보통",
+    "price" : 320000,
+    "star" : 3.0,
+    "url" : "C_academy.html"
+  },
+  {
+    "name" : "D academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 공릉동 139-804",
+    "type" : "2종 보통",
+    "price" : 350000,
+    "star" : 2.0,
+    "url" : "D_academy.html"
+  },
+  {
+    "name" : "E academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 월계동 272-781",
+    "type" : "2종 보통",
+    "price" : 400000,
+    "star" : 1.0,
+    "url" : "E_academy.html"
+  },
+  {
+    "name" : "A academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-503",
+    "type" : "2종 소형",
+    "price" : 356000,
+    "star" : 4.5,
+    "url" : "A_academy.html"
+  },
+  {
+    "name" : "B academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 상계동 127-311",
+    "type" : "2종 소형",
+    "price" : 370000,
+    "star" : 4.0,
+    "url" : "B_academy.html"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-256",
+    "type" : "2종 소형",
+    "price" : 270000,
+    "star" : 3.0,
+    "url" : "C_academy.html"
+  },
+  {
+    "name" : "D academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 공릉동 139-804",
+    "type" : "2종 소형",
+    "price" : 300000,
+    "star" : 2.0,
+    "url" : "D_academy.html"
+  },
+  {
+    "name" : "E academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 월계동 272-781",
+    "type" : "2종 소형",
+    "price" : 350000,
+    "star" : 1.0,
+    "url" : "E_academy.html"
+  },
+  {
+    "name" : "A academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-503",
+    "type" : "원동기",
+    "price" : 286000,
+    "star" : 4.5,
+    "url" : "A_academy.html"
+  },
+  {
+    "name" : "B academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 상계동 127-311",
+    "type" : "원동기",
+    "price" : 320000,
+    "star" : 4.0,
+    "url" : "B_academy.html"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-256",
+    "type" : "원동기",
+    "price" : 220000,
+    "star" : 3.0,
+    "url" : "C_academy.html"
+  },
+  {
+    "name" : "D academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 공릉동 139-804",
+    "type" : "원동기",
+    "price" : 250000,
+    "star" : 2.0,
+    "url" : "D_academy.html"
+  },
+  {
+    "name" : "E academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 월계동 272-781",
+    "type" : "원동기",
+    "price" : 300000,
+    "star" : 1.0,
+    "url" : "E_academy.html"
+  }
+]
+var dbacademy = [
+  {
+    'name':'A academy',
+    'number':'02-2463-9263',
+    'self':1
+  },
+  {
+    'name':'B academy',
+    'number':'02-1517-4400',
+    'self':0
+  },
+  {
+    'name':'C academy',
+    'number':'02-1115-9846 ',
+    'self':1
+  },
+  {
+    'name':'D academy',
+    'number':'02-0225-3918',
+    'self':1
+  },
+  {
+    'name':'E academy',
+    'number':'02-7036-9936',
+    'self':1
+  }
+]
+var selectlist = []
 function binddelete(){
   $('.delete-like').click(function() {
       var result = confirm('정말 삭제하시겠습니까?');
@@ -20,6 +275,9 @@ likeRef.once('value').then(function(snapshot){
   var likes = snapshot.val()
   var childHTMLs = Object.keys(likes).map(function(key){
     var data = likes[key]
+    selectlist.push(data.name)
+    $("#first-academy").append(`<option>${data.name}</option>`)
+    $("#second-academy").append(`<option>${data.name}</option>`)
     return `
     <li>&rsaquo;
       <a href="${data.url}"><b>${data.name}</b></a>
@@ -30,6 +288,8 @@ likeRef.once('value').then(function(snapshot){
   var childHTML = childHTMLs.join("")
   $("#like_info").empty()
   $("#like_info").append(childHTML)
+  $(".loader-container").hide()
+  $("body").css("background-color", "white")
   binddelete()
 })
 
@@ -85,6 +345,11 @@ bookRef.on('value', function(snapshot){
   bindcancel();
 })
 
+var width = document.body.offsetWidth
+var height = document.body.offsetHeight
+// $(".loader-container").offset({top: 100});
+// $(".loader-container").offset({left: 100});
+
 $("#question-div").hover(function(){
   $("#question-info").html(`관심학원에 있는 두 학원을 비교해주는 기능입니다.<br/>
   오른쪽의 선택창에서 학원을 고르고, 면허를 고르면 비교할 수 있습니다.`)
@@ -127,4 +392,71 @@ $("#question-self").hover(function(){
 })
 $("#question-self").mouseout(function(){
   $("#question-info").hide()
+})
+
+$(".form-control").change(function(){
+  var f_academy = $("#first-academy").val()
+  var s_academy = $("#second-academy").val()
+  var f_type = $("#first-type").val()
+  var s_type = $("#second-type").val()
+  if(f_academy!="학원을 고르세요"&&f_type!="면허를 고르세요")
+  {
+    for(i=0;i<dbmypage.length;i++)
+    {
+      if(dbmypage[i]['name']==f_academy&&dbmypage[i]['type']==f_type)
+      {
+        $("#first-price").text(dbmypage[i]['price'])
+        $("#first-star").text(dbmypage[i]['star'])
+        $("#first-location").text(dbmypage[i]['real_location'])
+        for(j=0;j<dbacademy.length;j++)
+        {
+          if(dbacademy[j]["name"]==f_academy)
+          {
+            if(dbacademy[j]['self']==0)
+              $("#first-self").text("불가능")
+            else
+              $("#first-self").text("가능")
+            $("#first-number").text(dbacademy[j]['number'])
+          }
+        }
+      }
+    }
+  }
+  else {
+    $("#first-price").empty()
+    $("#first-star").empty()
+    $("#first-location").empty()
+    $("#first-self").empty()
+    $("#first-number").empty()
+  }
+  if(s_academy!="학원을 고르세요"&&s_type!="면허를 고르세요")
+  {
+    for(i=0;i<dbmypage.length;i++)
+    {
+      if(dbmypage[i]['name']==s_academy&&dbmypage[i]['type']==s_type)
+      {
+        $("#second-price").text(dbmypage[i]['price'])
+        $("#second-star").text(dbmypage[i]['star'])
+        $("#second-location").text(dbmypage[i]['real_location'])
+        for(j=0;j<dbacademy.length;j++)
+        {
+          if(dbacademy[j]["name"]==s_academy)
+          {
+            if(dbacademy[j]['self']==0)
+              $("#second-self").text("불가능")
+            else
+              $("#second-self").text("가능")
+            $("#second-number").text(dbacademy[j]['number'])
+          }
+        }
+      }
+    }
+  }
+  else {
+    $("#second-price").empty()
+    $("#second-star").empty()
+    $("#second-location").empty()
+    $("#second-self").empty()
+    $("#second-number").empty()
+  }
 })
