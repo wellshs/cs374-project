@@ -2249,5 +2249,42 @@ db = [
     "date" : "2017-05-31",
     "price" : 300000,
     "url" : "E_academy.html"
-  }
+  },
+  {
+    "name" : "A academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 중계1동 243-503",
+    "type" : "1종 보통",
+    "date" : "2017-06-30",
+    "price" : 486000,
+    "url" : "A_academy.html"
+  },
+  {
+    "name" : "C academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 하계2동 307-256",
+    "type" : "1종 보통",
+    "date" : "2017-06-30",
+    "price" : 420000,
+    "url" : "C_academy.html"
+  },
+  {
+    "name" : "D academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 공릉동 139-804",
+    "type" : "1종 보통",
+    "date" : "2017-06-30",
+    "price" : 450000,
+    "url" : "D_academy.html"
+  },
+  {
+    "name" : "E academy",
+    "location" : "서울시 노원구",
+    "real_location" : "서울시 노원구 월계동 272-781",
+    "type" : "1종 보통",
+    "date" : "2017-06-30",
+    "price" : 500000,
+    "url" : "E_academy.html"
+  },
+    
 ]
