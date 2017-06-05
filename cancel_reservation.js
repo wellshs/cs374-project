@@ -281,8 +281,9 @@ likeRef.once('value').then(function(snapshot){
     return `
     <li>&rsaquo;
       <a href="${data.url}"><b>${data.name}</b></a>
-      <span style="line-height:2%"><br></span>
-      <input type="button" class="delete-like" data-key="${key}" value = "삭제하기" style="margin-left : 20px"></input>
+      &nbsp;
+      <i class="fa fa-times delete-like" data-key="${key}" aria-hidden="true"></i>
+      <span style="line-height:2%"><br></span><br>
     </li>`
   })
   var childHTML = childHTMLs.join("")
@@ -292,6 +293,8 @@ likeRef.once('value').then(function(snapshot){
   $("body").css("background-color", "white")
   binddelete()
 })
+
+
 
 
 
@@ -335,9 +338,13 @@ bookRef.on('value', function(snapshot){
               <td style="text-indent : 20px">학원 위치 :</td>
               <td style="text-indent : 10px">서울시 노원구 중계1동 204-317</td>
           </tr>
+          <tr>
+              <td style="text-indent : 20px">전화 번호 :</td>
+              <td style="text-indent : 10px">02-1115-9846</td>
+          </tr>
       </table>
     <span style="line-height:1%"><br></span>
-    <input type="button" class="cancel_reservation" data-key="${key}" value = "예약 취소" style="margin-left : 20px"></input></div>`
+    <input type="button" class="btn btn-primary cancel_reservation" data-key="${key}" value = "예약 취소" style="margin-left : 20px; background-color: #337ab7; border-color:#2e6da4;"></input></div>`
   })
   var childHTML = childHTMLs.join("")
   $("#reservation_info").empty()
