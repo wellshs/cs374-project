@@ -29,14 +29,16 @@ $(".available").click(function()
   $("#time-table-title").html("2017-05-"+d);
 
   $(".available").css("background-color", "white");
-  $(this).css("background-color","yellow");
+  $(".available").css("font-weight", "");
+  $(".available").css("color", "black");
+  $(this).css("background-color","#337ab7");
+  $(this).css("font-weight","bold");
+  $(this).css("color","white");
 });
 
 $(".time-table").click(function(){
   $(this).find("input").attr("checked", true);
 })
-
-
 
 $("#btn-book").click(function()
 {

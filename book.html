@@ -3,17 +3,18 @@
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <link rel="stylesheet" href="./car_scanner.css"/>
   </head>
   <body>
     <div class='row'>
       <div class='col-md-6 col-sm-6 col-lg-6'>
-        <div class="datepicker" style="width:220px; height:250px; margin:0 auto;">
-          <table class=" table-condensed">
+        <div class="datepicker" style="width:220px;margin:0 auto;">
+          <table class="table">
             <thead>
               <tr>
                 <th class="prev" style="visibility: visible;"><i class="icon-arrow-left"></i></th>
-                <th colspan="5" class="switch">May 2017</th>
+                <th colspan="5" style="text-align:center" class="switch">June 2017</th>
                 <th class="next" style="visibility: visible;">
                   <i class="icon-arrow-right"></i>
                 </th>
@@ -30,77 +31,77 @@
             </thead>
             <tbody>
               <tr>
-                  <td class="day old"><font color="#b0bec5">30</font></td>
+                <td class="day old">28</td>
+                <td class="day old">29</td>
+                <td class="day old">30</td>
+                <td class="day old">31</td>
                 <td class="day old">1</td>
                 <td class="day old">2</td>
                 <td class="day old">3</td>
+              </tr>
+              <tr>
                 <td class="day old">4</td>
-                <td class="day old">5</td>
-                <td class="day next">6</td>
+                <td class="day next available">5</td>
+                <td class="day next available">6</td>
+                <td class="day next available">7</td>
+                <td class="day next available">8</td>
+                <td class="day next available">9</td>
+                <td class="day next available">10</td>
               </tr>
               <tr>
-                <td class="day next">7</td>
-                <td class="day next">8</td>
-                <td class="day next">9</td>
-                <td class="day next">10</td>
-                <td class="day next">11</td>
-                <td class="day next">12</td>
-                <td class="day next">13</td>
+                <td class="day next available">11</td>
+                <td class="day next available">12</td>
+                <td class="day next available">13</td>
+                <td class="day next available">14</td>
+                <td class="day next available">15</td>
+                <td class="day next available">16</td>
+                <td class="day next available">17</td>
               </tr>
               <tr>
-                <td class="day next">14</td>
-                <td class="day next">15</td>
-                <td class="day next">16</td>
-                <td class="day next">17</td>
-                <td class="day next">18</td>
-                <td class="day next">19</td>
-                <td class="day next">20</td>
+                <td class="day next available">18</td>
+                <td class="day next available">19</td>
+                <td class="day next available">20</td>
+                <td class="day next available">21</td>
+                <td class="day next available">22</td>
+                <td class="day next available">23</td>
+                <td class="day next available">24</td>
               </tr>
               <tr>
-                <td class="day next">21</td>
-                <td class="day next available"><font color="blue">22</font></td>
-                <td class="day next available"><font color="blue">23</font></td>
-                <td class="day next available"><font color="blue">24</font></td>
-                <td class="day next available"><font color="blue">25</font></td>
-                <td class="day next available"><font color="blue">26</font></td>
-                <td class="day next available"><font color="blue">27</font></td>
-              </tr>
-              <tr>
-                <td class="day next available"><font color="blue">28</font></td>
-                <td class="day next available"><font color="blue">29</font></td>
-                <td class="day next available"><font color="blue">30</font></td>
-                <td class="day next available"><font color="blue">31</font></td>
-                <td class="day next"><font color="#b0bec5">1</font></td>
-                <td class="day next"><font color="#b0bec5">2</font></td>
-                <td class="day next"><font color="#b0bec5">3</font></td>
+                <td class="day next available">25</td>
+                <td class="day next available">26</td>
+                <td class="day next available">27</td>
+                <td class="day next available">28</td>
+                <td class="day next available">29</td>
+                <td class="day next available">30</td>
+                <td class="day old">1</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-<!--       
+<!--
         <script>
         $(.available).click(function(){
             $(.available).style.bgcolor ="white";
             $(this).style.bgcolor = "yellow";
         })
-        </script>    
+        </script>
          -->
-        
+
       <div class ='col-md-6 col-sm-6 col-lg-6'>
         <div id="time-table-div" stype="width:100px; heigh:300px; margin:0 auto;">
-          <table>
+          <table class='table-condensed'>
           <thead>
             <tr>
-              <th colspan="3" id="time-table-title">May</th>
+              <th colspan="3" style="text-align:center" id="time-table-title">May</th>
             </tr>
             <tr>
               <th>
               </th>
-              <th>
+              <th style="text-align:center">
                 강습 시간
               </th>
-              <th>
+              <th style="text-align:center">
                 남은 인원
               </th>
             </tr>

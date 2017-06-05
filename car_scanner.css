@@ -19,12 +19,13 @@ td {
 }
 
 .old{
-  color:'0xaaaaaa'
+  color:#b0bec5
 }
 
 
 .available:hover{
   font-weight: bold;
+  background-color:#e0e0e0;
   cursor: hand;
 }
 
