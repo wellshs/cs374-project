@@ -74,7 +74,7 @@ var dbmypage = [
     "real_location" : "서울시 노원구 하계2동 307-256",
     "type" : "1종 보통",
     "price" : 420000,
-    "star" : 3.0,
+    "star" : 4.5,
     "url" : "C_academy.html"
   },
   {
